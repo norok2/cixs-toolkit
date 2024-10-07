@@ -1,0 +1,33 @@
+def cixscan2 '
+{
+umv absorb -8
+for (etrans=3;etrans<=35;etrans=etrans+0.4) {
+umv energy E0+etrans/1000
+umv sth A[mono]
+dscan sth 0.01 -0.01 6 20
+dscan sth 0.01 -0.01 50 0.1
+}
+umv absorb 1
+umv energy E0
+ascan energy E0-0.003 E0+0.003 60 3
+
+umv absorb -8
+
+for (etrans=3;etrans<=35;etrans=etrans+0.4) {
+umv energy E0+etrans/1000
+umv sth A[mono]
+dscan sth 0.01+0.01/6 -0.01-0.01/6 7 30
+dscan sth 0.01 -0.01 50 0.1
+}
+umv absorb 1
+umv energy E0
+ascan energy E0-0.003 E0+0.003 60 3
+}
+'
+
+
+
+
+
+
+

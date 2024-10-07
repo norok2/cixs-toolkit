@@ -1,0 +1,34 @@
+COMPND  Si.pdb                                                                  
+HETATM    1 Si                   4.067  -1.310   1.967                
+HETATM    2 Si                   0.407  -0.376   2.658                
+HETATM    3 Si                   1.325  -2.310  -0.529                
+HETATM    4 Si                   2.335   1.376  -0.162                
+HETATM    5 Si                   1.619  -0.272  -1.728                
+HETATM    6 Si                  -2.041   0.662  -1.037                
+HETATM    7 Si                  -0.310  -2.024   1.093                
+HETATM    8 Si                   0.700   1.663   1.459                
+HETATM    9 Si                   3.254  -0.558  -3.350                
+HETATM   10 Si                  -0.407   0.376  -2.658                
+HETATM   11 Si                  -0.603  -4.063   2.291                
+HETATM   12 Si                  -2.335  -1.377   0.162                
+HETATM   14 Si                   1.416   3.311   3.025                
+HETATM   15 Si                  -1.325   2.310   0.529                
+HETATM   18 Si                  -4.067   1.310  -1.967                
+HETATM   13 Si                  -1.416  -3.311  -3.025                
+HETATM   16 Si                   0.603   4.062  -2.292                
+HETATM   17 Si                  -3.254   0.557   3.350                
+CONECT    2    7    8                                        
+CONECT    3    5    7                                        
+CONECT    4    5    8                                        
+CONECT    5    3    4    9   10                              
+CONECT    6   10   12   15   18                              
+CONECT    7    2    3   11   12                              
+CONECT    8    2    4   14   15                              
+CONECT    9    5                                             
+CONECT   10    5    6                                        
+CONECT   11    7                                             
+CONECT   12    6    7                                        
+CONECT   14    8                                             
+CONECT   15    6    8                                        
+CONECT   18    6                                             
+END   

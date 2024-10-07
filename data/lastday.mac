@@ -1,0 +1,63 @@
+def  lastday '
+{
+shopen
+plotselect keith
+michkon
+harm1
+gscan_on u35d
+global etrans
+
+umv energy E0
+ascan energy E0-0.003 E0+0.003 60 1
+
+#for (etrans=-5;etrans<=40;etrans=etrans+0.5) {
+for (etrans=22;etrans<=40;etrans=etrans+0.5) {
+umv energy E0+etrans/1000
+umv schi2 -deg(asin(sqrt(8/3)*sin(rad(A[mono]))))
+dscan schi2 -0.015 0.015 40 0.1
+bgr;umv schi2 CEN
+dscan schi2 -0.005 0.005 20 5
+dscan schi2 -1.5 1.5 1 5
+}
+
+for (etrans=42;etrans<=120;etrans=etrans+2) {
+umv energy E0+etrans/1000
+umv schi2 -deg(asin(sqrt(8/3)*sin(rad(A[mono]))))
+dscan schi2 -0.015 0.015 40 0.1
+bgr;umv schi2 CEN
+dscan schi2 -0.005 0.005 20 5
+dscan schi2 -1.5 1.5 1 5
+}
+
+umvr ath -0.5
+for (etrans=-5;etrans<=120;etrans=etrans+4) {
+umv energy E0+etrans/1000
+umv schi2 -deg(asin(sqrt(8/3)*sin(rad(A[mono]))))
+dscan schi2 -0.015 0.015 40 0.1
+bgr;umv schi2 CEN
+dscan schi2 -0.005 0.005 20 5
+dscan schi2 -1.5 1.5 1 5
+}
+umvr ath 0.5
+
+umv energy E0
+ascan energy E0-0.003 E0+0.003 60 1
+
+for (etrans=-5;etrans<=40;etrans=etrans+0.5) {
+umv energy E0+etrans/1000
+umv schi2 -deg(asin(sqrt(8/3)*sin(rad(A[mono]))))
+dscan schi2 -0.01 0.01 40 0.1
+bgr;umv schi2 CEN
+dscan schi2 -0.005 0.005 20 5
+dscan schi2 -1.5 1.5 1 5
+}
+
+}
+'
+
+
+
+
+
+
+

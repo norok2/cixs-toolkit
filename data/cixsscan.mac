@@ -1,0 +1,11 @@
+def cixscan '
+{
+for (etrans=3;etrans<=35;etrans=etrans+0.4) {
+umv energy E0+etrans/1000
+umv sth A[mono]
+dscan sth 0.02 -0.02 200 0.1
+dscan sth 0.01 -0.01 6 20
+dscan sth 0.02 -0.02 200 0.1
+}
+}
+'

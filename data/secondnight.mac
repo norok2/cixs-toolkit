@@ -1,0 +1,60 @@
+def secondnight '
+{
+shopen
+plotselect keith
+michkon
+gscan_on u35d
+
+umv energy E0
+ascan energy E0-0.003 E0+0.003 60 1
+
+for (etrans=-5;etrans<=30;etrans=etrans+0.5) {
+umv energy E0+etrans/1000
+umv schi2 -A[mono]
+dscan schi2 -0.015 0.015 60 .1
+umv schi2 CEN
+dscan schi2 -0.005 0.005 20 10
+dscan schi2 -0.05 0.05 1 10
+}
+
+for (etrans=32;etrans<=120;etrans=etrans+2) {
+umv energy E0+etrans/1000
+umv schi2 -A[mono]
+dscan schi2 -0.015 0.015 60 .1
+umv schi2 CEN
+dscan schi2 -0.005 0.005 20 10
+dscan schi2 -0.05 0.05 1 10
+}
+
+umvr ath -0.5
+for (etrans=-5;etrans<=120;etrans=etrans+4) {
+umv energy E0+etrans/1000
+umv schi2 -A[mono]
+dscan schi2 -0.015 0.015 60 .1
+umv schi2 CEN
+dscan schi2 -0.005 0.005 20 10
+dscan schi2 -0.05 0.05 1 10
+}
+umvr ath 0.5
+
+umv energy E0
+ascan energy E0-0.003 E0+0.003 60 1
+
+for (etrans=-5;etrans<=30;etrans=etrans+0.5) {
+umv energy E0+etrans/1000
+umv schi2 -A[mono]
+dscan schi2 -0.015 0.015 60 .1
+umv schi2 CEN
+dscan schi2 -0.005 0.005 20 10
+dscan schi2 -0.05 0.05 1 10
+}
+
+}
+'
+
+
+
+
+
+
+
